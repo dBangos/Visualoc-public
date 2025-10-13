@@ -1,0 +1,33 @@
+[package]
+name = "visualoc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+egui = { version = "0.32" }
+eframe = { version = "0.32", features = ["persistence"] }
+egui_extras = { version = "0.32", features = ["all_loaders"] }
+image = { version = "0.25.4", features = ["jpeg", "png", "webp"] }
+uuid = { version = "1.11.0", features = ["js", "v4", "fast-rng"] }
+serde = { version = "1.0.217", features = ["derive"] }
+chrono = { version = "0.4.39" }
+reqwest = { version = "0.12.12", features = ["json", "multipart"] }
+tokio = { version = "1", features = ["sync"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3.70", features = [
+    "Window",
+    "Document",
+    "Blob",
+    "BlobPropertyBag",
+    "Url",
+    "HtmlAnchorElement",
+    "FileList",
+    "HtmlInputElement",
+    "File",
+    "FileReader",
+    "HtmlFormElement",
+] }
+log = "0.4"
+js-sys = "0.3.77"
+rfd = "0.15.3"

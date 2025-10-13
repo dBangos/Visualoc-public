@@ -1,0 +1,28 @@
+[package]
+name = "visualoc_server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8.1", features = ["macros", "multipart"] }
+sqlx = { version = "0.8", features = [
+    "postgres",
+    "runtime-tokio",
+    "tls-native-tls",
+] }
+tokio = { version = "1.0", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0.219" }
+uuid = { version = "1.11.0", features = ["v4", "fast-rng"] }
+infer = { version = "0.19" }
+tower = "0.5.2"
+tower-http = { version = "0.5", features = ["cors", "limit"] }
+tokio-util = { version = "0.7.14", features = ["io"] }
+jsonwebtoken = "9.3.1"
+argon2 = "0.5.3"
+image = "0.25.5"
+zip = "4.0.0"
+dashmap = "6.1.0"
+aes-gcm = "0.10.3"
+base64 = "0.22.1"
